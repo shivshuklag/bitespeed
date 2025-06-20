@@ -27,9 +27,6 @@ export class CreateIdentityDto {
 
   @IsString()
   @IsOptional()
-  @Matches(/^[6-9]\d{9}$/, {
-    message: 'Invalid Indian phone number. Must be 10 digits starting with 6-9',
-  })
   phoneNumber?: string;
 
   @Validate(EitherEmailOrPhoneConstraint)
