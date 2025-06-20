@@ -4,9 +4,11 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import databaseConfig from './config/database.config';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { Contact } from './entities/contact.entity';
 
 @Module({
   imports: [
+    TypeOrmModule.forFeature([Contact]),
     ConfigModule.forRoot({ isGlobal: true, load: [databaseConfig] }),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
