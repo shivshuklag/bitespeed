@@ -1,3 +1,7 @@
+## Hosted backend url
+
+Find the [Backend Url](https://bitespeed-ufow.onrender.com)
+
 ## Project setup
 
 ```bash
@@ -28,4 +32,15 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Run migrations
+
+```bash
+# generate migration
+$ npm run migration:gen
+
+# run migration
+$ npm run migration:run
+
 ```
