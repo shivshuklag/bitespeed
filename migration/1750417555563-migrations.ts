@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from "typeorm";
 
-export class Migrations1750404485760 implements MigrationInterface {
-    name = 'Migrations1750404485760'
+export class Migrations1750417555563 implements MigrationInterface {
+    name = 'Migrations1750417555563'
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.query(`CREATE TYPE "public"."contact_linkprecedence_enum" AS ENUM('primary', 'secondary')`);

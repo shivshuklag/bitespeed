@@ -12,6 +12,9 @@ const config = {
   database: customConfigService.getValue('DATABASE_NAME'),
   entities: [join(__dirname, '/../**/*.entity.{js,ts}')],
   migrations: [join(__dirname, '/../../migration/*{.ts,.js}')],
+  ssl: {
+    rejectUnauthorized: false,
+  },
   autoLoadEntities: true,
   synchronize: false,
 };
